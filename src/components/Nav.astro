@@ -1,18 +1,17 @@
 ---
 interface Props {
-  a: Array<string>,
-  b: Array<string>,
-  c: Array<string>,
-  d: Array<string>
+  a: Array<string>;
+  b: Array<string>;
+  c: Array<string>;
+  d: Array<string>;
 }
 
-const {a, b, c, d} = Astro.props;
+const { a, b, c, d } = Astro.props;
 ---
 
-
-<header class=" absolute inset-x-0 top-0 z-50">
+<header class="absolute inset-x-0 top-0 z-50">
   <nav
-    class="flex items-center justify-between p-6 lg:px-8  max-w-6xl m-auto"
+    class="flex items-center justify-between p-6 lg:px-8 max-w-6xl m-auto"
     aria-label="Global"
   >
     <div class="flex lg:flex-1">
@@ -22,8 +21,12 @@ const {a, b, c, d} = Astro.props;
         src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
         alt=""
         /> -->
-        <span class="text-xl font-bold leading-6 text-gray-900 ml-2"><i class="las la-home"></i></span>
-        <span class="text-sm font-semibold leading-6 text-gray-900">Doctor Sierra</span>
+        <span class="text-xl font-bold leading-6 text-gray-900 ml-2"
+          ><i class="las la-home"></i></span
+        >
+        <span class="text-sm font-semibold leading-6 text-gray-900"
+          >Doctor Sierra</span
+        >
       </a>
     </div>
     <div class="flex lg:hidden">
@@ -49,16 +52,24 @@ const {a, b, c, d} = Astro.props;
       </button>
     </div>
     <div class="hidden lg:flex lg:gap-x-12">
-      <a href={a[1]} class="flex items-center text-sm font-semibold leading-6 text-gray-900"
+      <a
+        href={a[1]}
+        class="flex items-center text-sm font-semibold leading-6 text-gray-900"
         ><i class={a[2]}></i>{a[0]}
       </a>
-      <a href={b[1]} class="flex items-center text-sm font-semibold leading-6 text-gray-900"
+      <a
+        href={b[1]}
+        class="flex items-center text-sm font-semibold leading-6 text-gray-900"
         ><i class={b[2]}></i>{b[0]}</a
       >
-      <a href={c[1]} class="flex items-center text-sm font-semibold leading-6 text-gray-900"
+      <a
+        href={c[1]}
+        class="flex items-center text-sm font-semibold leading-6 text-gray-900"
         ><i class={c[2]}></i>{c[0]}</a
       >
-      <a href={d[1]} class="flex items-center text-sm font-semibold leading-6 text-gray-900"
+      <a
+        href={d[1]}
+        class="flex items-center text-sm font-semibold leading-6 text-gray-900"
         ><i class={d[2]}></i>{d[0]}</a
       >
     </div>
@@ -78,12 +89,7 @@ const {a, b, c, d} = Astro.props;
     >
       <div class="flex items-center justify-between">
         <a href="#" class="-m-1.5 p-1.5">
-          <span class="sr-only">GPSierra</span>
-          <img
-            class="h-8 w-auto"
-            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-            alt=""
-          />
+          <span class="">Doctor Sierra</span>
         </a>
         <button
           id="close-menu-button"
@@ -108,34 +114,42 @@ const {a, b, c, d} = Astro.props;
       </div>
       <div class="mt-6 flow-root">
         <div class="-my-6 divide-y divide-gray-500/10">
-          <div class="space-y-2 py-6">
-            <a
-              href={a[1]}
+          <div class="space-y-2 py-6 flex flex-col">
+            <button
+              onclick="closeMenu()"
               class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-              ><i class={a[2]}></i>{a[0]}</a
             >
-            <a
-              href={b[1]}
+              <a href={a[1]}><i class={a[2]}></i>{a[0]}</a>
+            </button>
+
+            <button
+              onclick="closeMenu()"
               class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-              ><i class={b[2]}></i>{b[0]}</a
             >
-            <a
-              href={c[1]}
+              <a href={b[1]}><i class={b[2]}></i>{b[0]}</a>
+            </button>
+
+            <button
+              onclick="closeMenu()"
               class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-              ><i class={c[2]}></i>{c[0]}</a
             >
-            <a
-              href={d[1]}
+              <a href={c[1]}><i class={c[2]}></i>{c[0]}</a>
+            </button>
+
+            <button
+              onclick="closeMenu()"
               class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-              ><i class={d[2]}></i>{d[0]}</a
             >
+              <a href={d[1]}><i class={d[2]}></i>{d[0]}</a>
+            </button>
           </div>
           <div class="py-6">
-            <a
-              href="#"
-              class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-              >Patreon</a
+            <button
+              onclick="closeMenu()"
+              class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
             >
+              <a href="#">Patreon</a>
+            </button>
           </div>
         </div>
       </div>
@@ -143,20 +157,31 @@ const {a, b, c, d} = Astro.props;
   </div>
 </header>
 
-
 <script is:inline>
+  var openMenuButton;
+  var closeMenuButton;
+  var mobileMenu;
+
+  function closeMenu() {
+      mobileMenu.classList.add("hidden");
+    }
+
   document.addEventListener("DOMContentLoaded", function () {
-    var openMenuButton = document.getElementById("open-menu-button");
-    var closeMenuButton = document.getElementById("close-menu-button");
-    var mobileMenu = document.getElementById("mobile-menu");
+    openMenuButton = document.getElementById("open-menu-button");
+    closeMenuButton = document.getElementById("close-menu-button");
+    mobileMenu = document.getElementById("mobile-menu");
+
+    
 
     if (openMenuButton && closeMenuButton && mobileMenu) {
+      mobileMenu.classList.add("hidden");
+
       openMenuButton.addEventListener("click", function () {
         mobileMenu.classList.remove("hidden");
       });
 
       closeMenuButton.addEventListener("click", function () {
-        mobileMenu.classList.add("hidden");
+        closeMenu();
       });
     } else {
       console.error("Some elements were not found");
@@ -171,5 +196,14 @@ const {a, b, c, d} = Astro.props;
     font-size: 1.5rem !important;
     margin-right: 0.5rem;
     margin-top: 0.1rem;
+  }
+  button {
+    width: 100%;
+    text-align: left;
+  }
+  #close-menu-button,
+  #open-menu-button {
+    text-align: right !important;
+    width: max-content !important;
   }
 </style>

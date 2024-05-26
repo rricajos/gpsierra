@@ -3,6 +3,8 @@ interface Props {
 	title: string;
 }
 
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
 const { title } = Astro.props;
 ---
 
@@ -16,8 +18,15 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class="bg-white">
+		<Nav
+			a={["Medicina", "/gpsierra/medicina"]}
+			b={["Impresión 3D", "/gpsierra/impresion3d"]}
+			c={["Podcast", "/gpsierra/podcast"]}
+			d={["Libros", "/gpsierra/libros"]}
+		/>
 		<slot />
+		<Footer />
 	</body>
 </html>
 <style is:global>

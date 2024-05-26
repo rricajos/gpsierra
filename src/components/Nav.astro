@@ -12,17 +12,18 @@ const {a, b, c, d} = Astro.props;
 
 <header class=" absolute inset-x-0 top-0 z-50">
   <nav
-    class="flex items-center justify-between p-6 lg:px-8"
+    class="flex items-center justify-between p-6 lg:px-8  max-w-6xl m-auto"
     aria-label="Global"
   >
     <div class="flex lg:flex-1">
-      <a href="/gpsierra" class="-m-1.5 p-1.5">
-        <span class="sr-only">GPSierra</span>
-        <img
-          class="h-8 w-auto"
-          src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-          alt=""
-        />
+      <a href="/gpsierra" class="flex items-center -m-1.5 p-1.5">
+        <!-- <img
+        class="h-8 w-auto"
+        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+        alt=""
+        /> -->
+        <span class="text-xl font-bold leading-6 text-gray-900 ml-2"><i class="las la-home"></i></span>
+        <span class="text-sm font-semibold leading-6 text-gray-900">Doctor Sierra</span>
       </a>
     </div>
     <div class="flex lg:hidden">
@@ -48,17 +49,17 @@ const {a, b, c, d} = Astro.props;
       </button>
     </div>
     <div class="hidden lg:flex lg:gap-x-12">
-      <a href={a[1]} class="text-sm font-semibold leading-6 text-gray-900"
-        >{a[0]}
+      <a href={a[1]} class="flex items-center text-sm font-semibold leading-6 text-gray-900"
+        ><i class={a[2]}></i>{a[0]}
       </a>
-      <a href={b[1]} class="text-sm font-semibold leading-6 text-gray-900"
-        >{b[0]}</a
+      <a href={b[1]} class="flex items-center text-sm font-semibold leading-6 text-gray-900"
+        ><i class={b[2]}></i>{b[0]}</a
       >
-      <a href={c[1]} class="text-sm font-semibold leading-6 text-gray-900"
-        >{c[0]}</a
+      <a href={c[1]} class="flex items-center text-sm font-semibold leading-6 text-gray-900"
+        ><i class={c[2]}></i>{c[0]}</a
       >
-      <a href={d[1]} class="text-sm font-semibold leading-6 text-gray-900"
-        >{d[0]}</a
+      <a href={d[1]} class="flex items-center text-sm font-semibold leading-6 text-gray-900"
+        ><i class={d[2]}></i>{d[0]}</a
       >
     </div>
     <div class="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -111,22 +112,22 @@ const {a, b, c, d} = Astro.props;
             <a
               href={a[1]}
               class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-              >{a[0]}</a
+              ><i class={a[2]}></i>{a[0]}</a
             >
             <a
               href={b[1]}
               class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-              >{b[0]}</a
+              ><i class={b[2]}></i>{b[0]}</a
             >
             <a
               href={c[1]}
               class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-              >{c[0]}</a
+              ><i class={c[2]}></i>{c[0]}</a
             >
             <a
               href={d[1]}
               class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-              >{d[0]}</a
+              ><i class={d[2]}></i>{d[0]}</a
             >
           </div>
           <div class="py-6">
@@ -162,3 +163,13 @@ const {a, b, c, d} = Astro.props;
     }
   });
 </script>
+<style>
+  * {
+    font-size: 1.2rem;
+  }
+  i {
+    font-size: 1.5rem !important;
+    margin-right: 0.5rem;
+    margin-top: 0.1rem;
+  }
+</style>

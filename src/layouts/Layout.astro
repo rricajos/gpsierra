@@ -1,60 +1,60 @@
 ---
-interface Props {
-	title: string;
-}
-
+import Head from "./Head.astro";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
-const { title } = Astro.props;
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const {
+	title = "Doctor Giuseppe Sierra",
+	description = "La página web del doctor Giuseppe Sierra"
+} = Astro.props as Props;
+
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
+<html lang="es">
+	<Head title={title} description={description}/>
 	<body class="bg-white">
 		<Nav
-			a={["Medicina", "/gpsierra/medicina"]}
-			b={["Impresión 3D", "/gpsierra/impresion3d"]}
-			c={["Podcast", "/gpsierra/podcast"]}
-			d={["Libros", "/gpsierra/libros"]}
+			a={["Medicina", "/gpsierra/medicina", "las la-stethoscope"]}
+			b={["3D", "/gpsierra/impresion", "las la-cube"]}
+			c={["Podcast", "/gpsierra/podcast", "las la-headphones-alt"]}
+			d={["Libros", "/gpsierra/libros", "las la-book"]}
 		/>
 		<slot />
 		<Footer />
+		<style is:global>
+			:root {
+				--accent: 136, 58, 234;
+				--accent-light: 224, 204, 250;
+				--accent-dark: 49, 10, 101;
+				--accent-gradient: linear-gradient(
+					45deg,
+					rgb(var(--accent)),
+					rgb(var(--accent-light)) 30%,
+					white 60%
+				);
+			}
+			html {
+				font-family: system-ui, sans-serif;
+				background: #13151a;
+				background-size: 224px;
+			}
+			code {
+				font-family:
+					Menlo,
+					Monaco,
+					Lucida Console,
+					Liberation Mono,
+					DejaVu Sans Mono,
+					Bitstream Vera Sans Mono,
+					Courier New,
+					monospace;
+			}
+		</style>
 	</body>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-</style>

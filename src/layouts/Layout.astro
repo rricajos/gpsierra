@@ -10,20 +10,19 @@ interface Props {
 
 const {
 	title = "Doctor Giuseppe Sierra",
-	description = "La página web del doctor Giuseppe Sierra"
+	description = "La página web del doctor Giuseppe Sierra",
 } = Astro.props as Props;
-
 ---
 
 <!doctype html>
 <html lang="es">
-	<Head title={title} description={description}/>
+	<Head title={title} description={description} />
 	<body class="bg-white">
 		<Nav
-			a={["Medicina", "/gpsierra/medicina", "las la-stethoscope"]}
+			a={["Libros", "/gpsierra/libros", "las la-book"]}
 			b={["3D", "/gpsierra/impresion", "las la-cube"]}
 			c={["Podcast", "/gpsierra/podcast", "las la-headphones-alt"]}
-			d={["Libros", "/gpsierra/libros", "las la-book"]}
+			d={["Blog", "/gpsierra/blog", "las la-rss"]}
 		/>
 		<slot />
 		<Footer />

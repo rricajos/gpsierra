@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/PostLayout.astro
 title: Los beneficios de una dieta balanceada
 description: Una dieta equilibrada es crucial para mantener una buena salud. Descubre los beneficios clave de seguir una alimentación balanceada.
 date: 16 de marzo de 2024

@@ -1,5 +1,6 @@
 ---
-title: Impresión 3D: Aplicaciones innovadoras en la medicina
+layout: ../../layouts/PostLayout.astro
+title: Impresión 3D Aplicaciones innovadoras en la medicina
 description: Descubre cómo la impresión 3D está revolucionando la industria médica con nuevas aplicaciones y avances tecnológicos.
 date: 2 de abril de 2024
 tags: Impresión 3D, Medicina

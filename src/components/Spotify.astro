@@ -1,5 +1,6 @@
 ---
 import SpotifyCard from "./SpotifyCard.astro";
+
 ---
 
 <section class="max-w-6xl m-auto">
@@ -7,15 +8,50 @@ import SpotifyCard from "./SpotifyCard.astro";
     Giuseppe Podcast
   </h2>
 
+  <div id="c"></div>
+
+  <script is:inline>
+    // Agregar HTML al contenedor
+
+    document.getElementById("c").innerHTML = htmlContent;
+  </script>
+
   <div class="miduthx pt-2 pb-2">
-    <SpotifyCard title="Impr. 3D" description="asdasdasdsdasd" icon="las la-box" />
-    <SpotifyCard title="Antropologia" description="asdasdasdsdasd" icon="las la-box" />
-    <SpotifyCard title="Medicina" description="asdasdasdsdasd" icon="las la-box" />
-    <SpotifyCard title="Psicologia" description="asdasdasdsdasd" icon="las la-box" />
-    <SpotifyCard title="Ciclismo" description="asdasdasdsdasd" icon="las la-box" />
-    <SpotifyCard title="Agricultura" description="asdasdasdsdasd" icon="las la-box" />
-    <SpotifyCard title="Ganaderia" description="asdasdasdsdasd" icon="las la-box" />
- 
+    <SpotifyCard
+      title="Impr. 3D"
+      description="asdasdasdsdasd"
+      icon="las la-box"
+    />
+    <SpotifyCard
+      title="Antropologia"
+      description="asdasdasdsdasd"
+      icon="las la-box"
+    />
+    <SpotifyCard
+      title="Medicina"
+      description="asdasdasdsdasd"
+      icon="las la-box"
+    />
+    <SpotifyCard
+      title="Psicologia"
+      description="asdasdasdsdasd"
+      icon="las la-box"
+    />
+    <SpotifyCard
+      title="Ciclismo"
+      description="asdasdasdsdasd"
+      icon="las la-box"
+    />
+    <SpotifyCard
+      title="Agricultura"
+      description="asdasdasdsdasd"
+      icon="las la-box"
+    />
+    <SpotifyCard
+      title="Ganaderia"
+      description="asdasdasdsdasd"
+      icon="las la-box"
+    />
   </div>
 
   <div class="episodes">

@@ -1,5 +1,6 @@
 ---
-title: Avances en Ortopedia y Traumatología: Tecnología y Tratamientos Innovadores
+layout: ../../layouts/PostLayout.astro
+title: Avances en Ortopedia y Traumatología, Tecnología y Tratamientos Innovadores
 description: Descubre cómo los avances tecnológicos están transformando la ortopedia y traumatología, mejorando los tratamientos y la recuperación de los pacientes.
 date: 10 de mayo de 2024
 tags: Ortopedia, Traumatología, Avances Tecnológicos

@@ -1,9 +1,9 @@
 ---
-import RotatingHeadline from "./RotatingHeadLine.astro";
+import ButtonConsult from "./ButtonConsult.astro";
 ---
 
 <div class="bg-white">
-  <div class="relative isolate px-6 pt-0 lg:px-8">
+  <div class="relative isolate px-3 pt-0 lg:px-8">
     <div
       class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
       aria-hidden="true"
@@ -16,56 +16,24 @@ import RotatingHeadline from "./RotatingHeadLine.astro";
     </div>
     <div
       class="max-w-7x1
-       m-auto py-16 sm:py-24 lg:py-32 flex flex-row flex-wrap justify-evenly items-center"
+       m-auto py-16 sm:py-24 lg:py-32 flex flex-row flex-wrap-reverse justify-evenly items-center"
     >
       <div class="text-left relative max-w-lg">
         <h1 class="hidden">Giuseppe Sierra</h1>
         <h2 class="text-4xl font-bold tracking-tight text-gray-900">
-          Doctor Giuseppe Sierra corta tus problemas de raiz
+          Imagina poder andar, nadar, correr, trepar, respirar, enfocarte
         </h2>
         <p class="mt-6 text-2xl leading-8">
-          Médico, Cirujano Tramatologo y Ortopedista con más de 30 años de
-          experiencia profesional.
-          <!-- <br /><br />
-
-          🐣 Venezuela 📍 Galicia, España. -->
+          Servicio de consultoria médica. 
         </p>
-        <p class="text-lg pt-4">
-          <i class="text-gray-500 text-md">
-            <!-- Quiero ayudar a mejorar la calidad de vida de todas las personas
-            gracias a los avances en Medicina e Impresión 3D. -->
-          </i>
-        </p>
-
+        
+        <ButtonConsult />
         <div>
           <ul class="py-2">
-            <li class="text-lg py-2">
-              ⚕️ Asesoria Profesional de tu Tratamiento y Rehabilitación
-            </li>
-            <li class="text-lg py-2">
-              🎯 Coaching - Sigamos tu plan Nutricional, Mental y Físico 
-            </li>
-            <li class="text-lg py-2">
-              👽 Impresion 3D de Protesis y Férulas personalizadas.
-            </li>
+            <li class="text-xl leading-8 py-2">⚕️ Profesional con <b> más de 30 años de experiencia</b></li>
+            <li class="text-xl leading-8 py-2">🎯 Seré tu <b>Médico, Entrenador, Fisio y/o Nutricionista</b> </li>
+            <li class="text-xl leading-8 py-2">👽 Podras encargar <b>Protesis y Férulas a medida</b> </li>
           </ul>
-        </div>
-        <div
-          class="flex items-center flex-wrap justify-center lg:justify-start gap-x-6"
-        >
-          <a
-            href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2BT8N0GkxL0xPnzOnsWTsO75WsudYhgt1cVilc3PLlDTBmDpsh02L6dnFGvvE7VlT8XHRyQ3Yz?gv=true"
-            target="_blank"
-            class="mt-6 inline-block w-full rounded-xl border border-transparent bg-cyan-400 px-8 py-3 font-bold text-lg text-gray-900 hover:bg-cyan-600 sm:w-auto"
-          >
-            Reserva tu Consulta <i class="las la-external-link-alt"></i></a
-          >
-          <!-- <a
-          href="mailto:giuseppesierra8@gmail.com"
-          target="_blank"
-          class="mt-6 inline-block w-full rounded-md border border-transparent px-8 py-3 font-medium text-black hover:bg-cyan-300 sm:w-auto"
-          >Contactar por Correo Electronico</a
-        > -->
         </div>
       </div>
 

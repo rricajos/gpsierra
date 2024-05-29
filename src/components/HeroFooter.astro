@@ -1,6 +1,64 @@
+---
+import ButtonConsult from "./ButtonConsult.astro";
+---
+
 <!-- component -->
 <div class="bg-gray-50 relative overflow-hidden">
+  <!-- Callout -->
+  <section
+    aria-labelledby="sale-heading "
+    class="relative mx-auto flex flex-row flex-wrap justify-evenly items-start align-middle max-w-6xl px-4 py-8 text-center sm:px-6 lg:px-8"
+  >
+    <div>
+      <h2
+        id="sale-heading"
+        class="text-4xl font-bold tracking-tight text-gray-900 max-w-xl"
+      >
+        Consultar a @gpsierra
+      </h2>
+      <ul class="py-2 text-left">
+        <li class="text-lg py-2">⚕️ Como una 1ª/2ª opinion médica prof.</li>
+        <li class="text-lg py-2">🎯 Médico, Entrenador, Fisio y Nutricionista</li>
+        <li class="text-lg py-2">👽 Encargar Protesis y Férulas Personalizadas.</li>
+        <li class="text-lg py-2">💍 Pagar por reservar crea compromiso </li>
+      </ul>
+      <ButtonConsult />
+    </div>
+    <div class="max-w-lg">
+      <div class="max-w-lg lg:max-w-none">
+        <h2
+          id="sale-heading"
+          class="text-4xl font-bold tracking-tight text-gray-900 max-w-xl"
+        >
+          Primera consulta gratuita por suscribirte a mi newsletter <br /><i
+            class="text-2xl">💊 Pildoras de Salud 💊</i
+          >
+        </h2>
+        <form class="mt-6">
+          <div class="relative">
+            <label class="sr-only" for="email"> Email </label>
 
+            <input
+              class="w-full rounded-full border-gray-200 bg-gray-100 p-4 pe-32 text-sm font-medium"
+              id="email"
+              type="email"
+              placeholder="ejemplo@mail.com"
+            />
+
+            <button
+              class="absolute end-1 top-1/2 -translate-y-1/2 rounded-full bg-blue-600 px-5 py-3 text-sm font-medium text-white transition hover:bg-blue-700"
+            >
+              Subscribirse
+            </button>
+          </div>
+        </form>
+        <p class="mx-auto mt-4 max-w-xl text-xl text-gray-600">
+          Recibiras emails diarios de máximo 10 minutos de lectura con material
+          práctico y descargable.
+        </p>
+      </div>
+    </div>
+  </section>
 
   <!-- Testimonials -->
   <section
@@ -12,7 +70,7 @@
         id="testimonial-heading"
         class="text-2xl font-bold tracking-tight text-gray-900"
       >
-        Reseñas del Servicio
+        Testimonios
       </h2>
 
       <div
@@ -86,46 +144,6 @@
           </div>
         </blockquote>
       </div>
-    </div>
-  </section>
-
-  <!-- Callout -->
-  <section
-    aria-labelledby="sale-heading"
-    class="relative mx-auto flex max-w-6xl flex-col items-center px-4 py-8 text-center sm:px-6 lg:px-8"
-  >
-    <div class="mx-auto max-w-2xl lg:max-w-none">
-      <h2
-        id="sale-heading"
-        class="text-4xl font-bold tracking-tight text-gray-900 max-w-xl"
-      >
-        Primera consulta gratuita por suscribirte a mi newsletter <br /><i
-          class="text-2xl">💊 Pildoras de Salud 💊</i
-        >
-      </h2>
-      <form class="mt-6">
-        <div class="relative ">
-          <label class="sr-only" for="email"> Email </label>
-
-          <input
-            class="w-full rounded-full border-gray-200 bg-gray-100 p-4 pe-32 text-sm font-medium"
-            id="email"
-            type="email"
-            placeholder="ejemplo@mail.com"
-          />
-
-          <button
-            class="absolute end-1 top-1/2 -translate-y-1/2 rounded-full bg-blue-600 px-5 py-3 text-sm font-medium text-white transition hover:bg-blue-700"
-          >
-            Subscribirse
-          </button>
-        </div>
-      </form>
-      <p class="mx-auto mt-4 max-w-xl text-xl text-gray-600">
-        Recibiras emails diarios de máximo 10 minutos de lectura con material práctico y descargable.
-        
-      </p>
-      
     </div>
   </section>
 </div>
